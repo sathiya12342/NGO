@@ -29,11 +29,9 @@
         <div class="container">
                 <h1>Together We Can <span>Save Lives</span></h1>
                 <strong><p>We believe that every small effort counts and can lead to meaningful change.Together, we can bring hope, support, and dignity to those in need.Your compassion can light the way to a better tomorrow.</p></strong>
-                <button>Start With A Little</button>
-            </div>
-        </div>
+                <button onclick="openForm()">Start With A Little</button>
     </div>
-
+  </div>
     <section class="fullcontainer" id="aboutsection">
         <div class="container">
             <h2 class="sectiontitle">About Us</h2>
@@ -86,9 +84,28 @@
                     <div class="programtitle">Clean water for people</div>
                     <div class="donationCount">Donation Goal: <span>$9845</span></div>
                     <button>Donate Now</button>
-                </div>
-            </div>
         </div>
+     </div>
+ </div>
+<!-- Donation Form Popup -->
+<div id="donationOverlay" class="overlay" style="display: none;">
+  <div class="donation-form">
+    <h2>Donate to <span id="donationTitle">a Cause</span></h2>
+
+    <input type="text" id="donorName" placeholder="Your Name" required />
+    <input type="number" id="donorAmount" placeholder="Donation Amount (₹)" required />
+    <input type="text" id="donorMessage" placeholder="Message (optional)" />
+
+    <!-- QR Code Display -->
+    <div class="qr-section">
+      <p>Or scan to pay via UPI</p>
+      <img src="./images/qr.jpg" alt="UPI QR Code" class="qr-code" />
+    </div>
+
+    <button onclick="sendDonation()">Send via WhatsApp</button>
+    <button onclick="closeForm()" class="close-btn">Close</button>
+  </div>
+</div>
     </section>
 
     <section class="education" id="educationsection">
@@ -148,8 +165,25 @@
                 </div>
             </div>
         </div>
-
     </section>
+ <section class="sponsor-section" id="sponsors">
+  <div class="sponsor-container">
+    <h2>🌟 Our Proud Sponsors</h2>
+    <p>We are grateful for the incredible support from our partners and sponsors who make our mission possible.</p>
+
+    <div class="sponsor-grid">
+      <img src="./images/logo2.jpg" alt="Sponsor 1" class="sponsor-logo">
+      <img src="./images/logo1.jpg" alt="Sponsor 2" class="sponsor-logo">
+      <img src="./images/logo3.jpg" alt="Sponsor 3" class="sponsor-logo">
+      <img src="./images/logo4.jpg" alt="Sponsor 4" class="sponsor-logo">
+      <img src="./images/logo5.jpg" alt="Sponsor 5" class="sponsor-logo">
+      <img src="./images/logo1.jpg" alt="Sponsor 6" class="sponsor-logo">
+      <img src="./images/logo4.jpg" alt="Sponsor 7" class="sponsor-logo">
+      <img src="./images/logo5.jpg" alt="Sponsor 8" class="sponsor-logo">
+    </div>
+  </div>
+</section>
+
     <section class="join" id="joinsection">
         <div class="container">
             <div class="jointitle">ADOPT A CHILD & <span>SAVE LIVES</span></div>
@@ -159,6 +193,7 @@
             <button class="joinnow">Join Us</button>
             <button class="adoptbtn">ADOPT A CHILD</button>
         </div>
+        
     </section>
     <footer>
         <div class="container">
@@ -190,4 +225,6 @@
         </div>
     </footer>
 </body>
+<script src="./scripts.js">
+    </script>
 </html>
